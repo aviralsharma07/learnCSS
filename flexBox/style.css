@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: arial, helvetica;
+}
+
+.box-wrapper{
+    border: 7px solid black;
+    display: flex;
+
+    /* FLEX DIRECTION: PROPERTY OF CONTAINER 
+       flex-direction: row; -> DEFAULT VALUE
+       flex-direction: row-reverse;
+       flex-direction: column;
+       flex-direction: column-reverse;
+    */
+
+    /* FLEX WRAP: PROPERTY OF CONTAINER
+       flex-wrap: nowrap; -> DEFAULT VALUE 
+       flex-wrap: wrap;
+       flex-wrap: wrap-reverse;
+       IMP POINT: flex items inherits the dimensions of the container unless specified explicitly.
+    */
+    
+    /* JUSTIFY CONTENT: PROPERTY OF CONTAINER (Along Main Axis)
+       justify-content: flex-start;
+       justify-content: center;
+       justify-content: flex-end;
+       justify-content: space-between;
+       justify-content: space-around;
+       justify-content: space-evenly;
+    */
+
+    /* ALIGN ITEMS: PROPERTY OF CONTAINER (Along Cross Axis)
+       align-items: strech; -> DEFAULT VALUE // Due to this childs occupy all the height of container.
+       align-items: start;
+       align-items: center;
+       align-items: end;
+    */
+
+    /* FLEX FLOW: PROPERTY OF CONTAINER
+       - It is short hand for writing flex-directoon and flex-wrap together.
+         flex-flow: row nowrap;
+    */
+    width: 1200px;
+}
+
+.box{
+    border: 1px solid #666;
+    flex-basis: 300px;
+    flex-grow: 1;
+    /* FLEX BASIS: PROPERTY OF FLEX ITEM
+       - It is not similar to width.
+       - It is the Intial width along main axis. 
+       - This means if flex-direction is set to column then flex-basis will act as height not width.
+       - This is because in flex-direction column, height is along main axis and width aling cross. 
+    */
+
+    /* FLEX: PROPERTY OF FLEX ITEM
+       flex: 1 1 400px; -> Shorthand for flex-grow flex-shrink and flex-basis    
+    */
+}
+
+.box1{
+    background-color: lightblue;
+    /* ORDER: PROPERTY OF FLEXT ITEM (Tells which item to come before and after)
+       order: 0; -> DEFAULT VALUE
+       The Greater the Order, the more backward it will be placed in the Flex Container.
+    */
+}
+
+.box2{
+    background-color: lightcoral;
+    /* ALIGN SELF: PROPERTY OF FLEX ITEM (Aligns flex item along Cross Axis)
+       align-self: flex-start;
+       align-self: center;
+       align-self: flex-end;
+    */
+}
+
+.box3{
+    background-color: lightseagreen;
+}
+
+.box4{
+    background-color: lightgrey;
+}
+
+.box5{
+    background-color: lightgoldenrodyellow;
+}
