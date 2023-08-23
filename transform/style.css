@@ -1,0 +1,57 @@
+/* We can: (rotate, skew, scale, translate) using Transform Property */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 100px;
+    height: 20vh;
+    font-size: 1.5rem;
+    margin: 8px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(82, 15, 15);
+}
+
+.box1{
+    background: coral;
+    transition: transform 500ms ease-in-out;
+    transform-origin: bottom right; /* CHANGES THE ROTATION AXIS*/
+}
+
+.box1:hover{
+    transform: rotate(360deg);
+}
+
+.box2{
+    background: rgb(124, 124, 250);
+    transition: transform 500ms ease-in-out;
+}
+
+.box2:hover{
+    /* transform: scaleX(2);
+    transform: scaleY(2); */
+    transform: scale(3,2);
+}
+
+.box3{
+    background: rgb(248, 248, 78);
+    transition: transform 500ms ease-in-out;
+}
+
+.box3:hover{
+    transform: translate(350px,-153px);;
+}
+
+.box4{
+    background: rgb(66, 149, 251);
+    transition: transform 500ms ease-in-out;
+}
+
+.box4:hover{
+    transform: skew(7deg,13deg);
+}
