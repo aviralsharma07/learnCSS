@@ -1,0 +1,83 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation-name: change-bg-color;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-bg-color{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: lightgreen;
+    }
+}
+
+.box2{
+    height: 10px;
+    width: 15px;
+    background-color: blue;
+    animation-name: change-width;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change-width{
+    from{
+        width: 15px;
+    }
+    to{
+        width: 150px;
+    }
+}
+
+.box3{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    /* animation-name: move-around;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out; It is used to shlw the animation at beginning or ending */
+
+    animation: move-around 5s forwards 2s infinite ease-in ;
+
+    position: relative;
+}
+
+@keyframes move-around{
+    0%{
+        top: 0;
+        left: 0;
+        background-color: lightgoldenrodyellow;
+    }
+    25%{
+        top: 0;
+        left: 300px;
+        background-color: lightcoral;
+    }
+    50%{
+        top: 350px;
+        left: 300px;
+        background-color: lightseagreen;
+    }
+    75%{
+        top: 300px;
+        left: 0;
+        background-color: lightpink;
+    }
+    100%{
+        top: 0;
+        left: 0;
+        background-color: lightslategrey;
+    }
+}
