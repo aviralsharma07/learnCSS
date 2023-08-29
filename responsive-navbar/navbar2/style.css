@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "monsospace", sans-serif;
+}
+
+header {
+  background: #160c2e;
+  color: #fff;
+  display: flex;
+  height: 10vh;
+  font-size: 1.6rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+.logo {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 5 00;
+  padding: 1rem;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 1.2rem;
+}
+
+.nav-bar ul li a:hover {
+  color: #160c2e;
+  background-color: #fff;
+}
+
+.nav-bar ul li a.active {
+  color: #333;
+  background: #fff;
+}
+
+@media screen and (max-width: 1320px) {
+  header {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .hamburger .line {
+    width: 3rem;
+    height: 0.3rem;
+    background: #fff;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .nav-bar {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    width: 100vw;
+    background: #160c2e;
+    transition: 0.5s ease-in-out;
+    transform: translateX(100%);
+    overflow: hidden;
+  }
+
+  .nav-bar ul {
+    /* background: yellow; */
+    display: block;
+    width: fit-content;
+    margin: 8rem auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul li a {
+    margin-top: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hamburger.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active .line2 {
+    opacity: 0;
+  }
+
+  .hamburger.active .line3 {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
